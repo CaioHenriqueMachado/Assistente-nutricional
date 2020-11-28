@@ -1,57 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
-* {
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 14px Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Foi colocado abaixo novamente porque os campos não pegam font da Body */
+input, button, textarea {
+  font: 400 18px Roboto, sans-serif;
 }
 
 div.container {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   padding: 1%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  background-color: blueviolet;
+  justify-content: space-around;
+  background-color: rgba(64, 224, 208, 0.342);
 }
 
 div.box {
-  width: 370px;
+  width: 400px;
 }
 
 form {
-  background-color: brown;
+  border-left: 5px solid blue;
   width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  /* align-items: center; */
 }
 
 form div {
-  margin: 15px;
+  margin: 10px 0px;
   width: 200px;
+}
+
+form div.input {
   display: flex;
   flex-direction: column;
 }
 
-form input {
+form input[type=number] {
   width: 100%;
   height: 30px;
   padding: 5px;
 }
 
-input[type=submit] {
+
+input.submit {
+  text-align: center;
   cursor: pointer;
+  height: 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+
+div.result {
+  background-color: cadetblue;
+  border: 5px solid black;
+  border-radius: 50px 0px 50px 0px;
+  padding: 40px 20px;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.result div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.result div span{
+  justify-content: center;
+  text-align: left;
+  margin: 5px 0px;
+}
+
+span {
+  justify-content: center;
+  text-align: center;
+}
+
+span#title {
+  font-size: 24pt;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+  margin-bottom: 15px;
+}
+
+span#subtitle {
+  margin-bottom: 10px;
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+span#text {
+  font-size: 12pt;
 }
 
 
 
-div.result {
-  background-color: white;
-  width: 370px;
-  margin-top: 50px;
+.opacity {
+  opacity: 0%;
+}
+
+.notOpacity {
+  opacity: 100%;
+  transition: 2s;
 }

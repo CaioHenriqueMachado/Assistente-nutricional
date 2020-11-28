@@ -10,62 +10,61 @@
   <div class="container">
     <div class="box">
       <form>
-        <h3>DESCUBRA SUA TAXA CALÓRICA BASAL</h3>
-        <div>
+        <h3>DESCUBRA SUA TAXA DE METABOLISMO BASAL (TMB)</h3>
+        <div class="input">
           Digite seu peso:
-          <input type="number" min="0">
+          <input type="number" min="0" id="weight">
         </div>
-        <div>
+        <div class="input">
           Digite sua altura:
-          <input type="number" min="0">
+          <input type="number" min="0" id="height">
         </div>
-        <div>
+        <div class="input">
           Digite sua idade:
-          <input type="number" min="0">
+          <input type="number" min="0" id="age">
         </div>
-        <div>
-          <input type="submit" value="Calcular">
+        <div >
+          Sexo: <br/>
+          <input id="male" type="radio" name="sexo" value="Masculino" checked onclick="radio(0)"> Masculino
+          <input type="radio" name="sexo" value="Feminino" onclick="radio(1)"> Feminino
+        </div>
+        <div class="input">
+          <input class="submit" value="Calcular" onclick="calculate()">
         </div>
       </form>
     </div>
 
-    <div class="result">
-      <h2>Sua taxa calórica basal é de: 3200kcal/dia</h2>
-      <h3>Você gasta isso de calórias diariamente sem fazer nada.</h3>
-      <h2>Seu IMC é de: 20,00</h2>
-      <h3>Você está acima do peso com base no seu tamanho.</h3>
+    <div class="result opacity" id="divResult">
+      <span id="title"><span id="result_1"></span> kcal/dia </span>
+      <span id="subtitle">Sua taxa calórica basal é de: <span id="result_2"></span> TMB</span>
+      <span id="text">É o total de calorias gastas para manter as funções vitais, como os batimentos cardíacos, a pressão arterial e a temperatura corporal.</span>
+
+      <br>
+      <span id="subtitle">Necessidade diária de calorias</span>
 
       <div>
-        <h2>Eu quero emagrecer:</h2>
-        <h3>
-          Seu consumo por dia deve ser de:<br/>
-          Calorias: 2.000kcal
-          Carboidratos: 500g
-          Proteínas: 300g
-          Gordura: 50pg
-        </h3>
+        <span id="text"> - Caso não faça nenhuma atividade física: <span id="result_3"></span> kcal/dia</span>
+        <span id="text"> - Caso faça atividade física moderada: <span id="result_4"></span> kcal/dia</span>
+          <sub>(meia hora de caminhada, natação ou bicicleta, quatro vezes por semana)</sub>
+        <span id="text"> - Caso faça atividade física intensa: <span id="result_5"></span> kcal/dia</span>
+          <sub>(uma hora de corrida, pelo menos quatro vezes por semana)</sub>
       </div>
-      <div>
-        <h2>Eu quero manter:</h2>
-        <h3>
-          Seu consumo por dia deve ser de:<br/>
-          Calorias: 2.000kcal
-          Carboidratos: 500g
-          Proteínas: 300g
-          Gordura: 50pg
-        </h3>
-      </div>
-      <div>
-        <h2>Eu quero engordar:</h2>
-        <h3>
-          Seu consumo por dia deve ser de:<br/>
-          Calorias: 2.000kcal
-          Carboidratos: 500g
-          Proteínas: 300g
-          Gordura: 50pg
-        </h3>
+
+      <br>
+      <span id="subtitle">Como perder peso</span>
+      <span id="text">O ideal é que não se consumam menos calorias que o necessário para manter a taxa de metabolismo basal <strong>(TMB)</strong> por longos períodos.</span>
+      <span id="text"><strong> NDC - de 500 a 600 calorias</strong> = Quantidade máxima de calorias que pode ser ingerida diariamente.</span>
+
+      <br>
+      <span id="subtitle">Como manter o novo peso</span>
+      <span id="text">Refaça os cálculos da taxa de metabolismo basal <strong>(TMB)</strong> e da necessidade diária de calorias <strong>(NDC)</strong>. Depois, a regrinha é simples:</span>
+      <span id="text"><strong> NDC</strong> = Quantidade máxima de calorias que pode ser ingerida diariamente.</span>
+
+
       </div>
     </div>
   </div>
+
+  <script src="./script/script.js"></script>
 </body>
 </html>
