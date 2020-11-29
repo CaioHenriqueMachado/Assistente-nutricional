@@ -2,7 +2,7 @@
 
 <h2 align="center">Veja a quantidade de caloria que precisa consumir para se manter no seu objetivo.</h2>
 
-<p align="center"><strong><a href="https://caiohenriquemachado.github.io/velocimetro-digitacao/index.html">ACESSAR SITE</a></strong></p>
+<p align="center"><strong><a href="https://caiohenriquemachado.github.io/Assistente-nutricional/index.html">ACESSAR SITE</a></strong></p>
 
 <img src="./img/line.png" alt="line" width="100%">
 <br>
